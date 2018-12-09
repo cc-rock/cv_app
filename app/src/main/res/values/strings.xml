@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">CV App</string>
+
+    <string name="cv_contact_info">Address: %s\nEmail: %s\nTel: %s</string>
+    <string name="cv_skill">%1$s (%2$s, %3$.1f years)</string>
+    <string name="prof_exp_period">%s - %s</string>
+    <string name="cv_profile_title">Profile</string>
+    <string name="cv_skills_title">Skills</string>
+    <string name="professional_experiences">Professional experiences</string>
+    <string name="error_message">An error has occurred, please try again later.</string>
 </resources>
