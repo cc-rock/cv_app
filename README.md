@@ -38,11 +38,8 @@ Known issues / possible improvements
 
 - Add a "pull to refresh" action to the recyclerview, that reloads the data from the
 remoter api
-- Turn the email, phone, and ocmpany websites into clickable links (not done for lack of time)
+- Turn the email, phone, and company websites into clickable links
 - The "Years of experience" field in the skills section shown a decimal digit even when
-the number is integer (again, lack of time)
+the number is integer
 - Add proguard rules for the various libraries used: I haven't done that for lack of time,
 so there is chance that the app won't work properly with a release build and proguard enabled
-- There seems to be a performance problem when the app starts up (a white screen for about a second
-before the activity is even started), probably due to dagger
-initialisation: I haven't had time to investigate it.
