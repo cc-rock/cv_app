@@ -5,7 +5,9 @@ import dagger.Module
 import dagger.Provides
 import io.reactivex.Scheduler
 import io.reactivex.schedulers.Schedulers
+import net.cclounge.cvapp.cv.model.CvApi
 import net.cclounge.cvapp.cv.presenter.CvPresenterImpl
+import net.cclounge.cvapp.cv.presenter.CvPresenter
 import net.cclounge.cvapp.dagger.ActivityScope
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -34,8 +36,8 @@ abstract class DaggerModule {
         @JvmStatic
         @Provides
         @ActivityScope
-        fun provideModel(retrofit: Retrofit): CvModel {
-            return retrofit.create(CvModel::class.java)
+        fun provideApi(retrofit: Retrofit): CvApi {
+            return retrofit.create(CvApi::class.java)
         }
 
         @JvmStatic

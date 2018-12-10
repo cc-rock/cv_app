@@ -9,15 +9,17 @@ import net.cclounge.cvapp.CvApplication
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = [AppModule::class, AndroidInjectionModule::class])
-interface AppComponent: AndroidInjector<CvApplication> {
+@Component(modules = [TestAppModule::class, AndroidInjectionModule::class])
+interface TestAppComponent: AndroidInjector<CvApplication> {
+
+    fun inject(testApplication: TestApplication)
 
     @Component.Builder
     interface Builder {
         @BindsInstance
         fun application(application: Application): Builder
 
-        fun build(): AppComponent
+        fun build(): TestAppComponent
     }
 
 }

@@ -3,14 +3,17 @@ package net.cclounge.cvapp.dagger
 import android.app.Application
 import android.content.Context
 import android.content.res.Resources
+import com.nhaarman.mockitokotlin2.mock
 import com.squareup.picasso.Picasso
 import dagger.Module
 import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import net.cclounge.cvapp.cv.view.CvActivity
+import net.cclounge.cvapp.cv.presenter.CvPresenter
+import javax.inject.Singleton
 
 @Module
-abstract class AppModule {
+abstract class TestAppModule {
 
     @Module
     companion object {
@@ -33,10 +36,17 @@ abstract class AppModule {
             return Picasso.get()
         }
 
+        @Provides
+        @JvmStatic
+        @Singleton
+        fun provideMockPresenter(): CvPresenter {
+            return mock()
+        }
+
     }
 
     @ActivityScope
-    @ContributesAndroidInjector(modules = [net.cclounge.cvapp.cv.DaggerModule::class])
+    @ContributesAndroidInjector
     abstract fun createCvActivityInjector(): CvActivity
 
 }

@@ -1,4 +1,4 @@
-package net.cclounge.cvapp.cv
+package net.cclounge.cvapp.cv.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -12,9 +12,7 @@ import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.subscribeBy
 import kotlinx.android.synthetic.main.activity_cv.*
 import net.cclounge.cvapp.R
-import net.cclounge.cvapp.cv.view.CvAdapter
-import net.cclounge.cvapp.cv.view.CvScreenState
-import net.cclounge.cvapp.cv.view.CvScreenViewModel
+import net.cclounge.cvapp.cv.presenter.CvPresenter
 import javax.inject.Inject
 
 class CvActivity : AppCompatActivity() {
